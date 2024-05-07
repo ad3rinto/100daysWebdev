@@ -1,0 +1,25 @@
+/** @format */
+body {
+	background-color: black;
+}
+
+.container {
+	text-align: center;
+	width: 50%;
+	margin-left: 25%;
+}
+h1 {
+	font-family: "Libre Baskerville", serif;
+	font-weight: 400;
+	font-style: normal;
+	color: white;
+}
+
+img {
+	align-self: center;
+	border: 5px white solid;
+	width: 100%;
+}
+p {
+	color: white;
+}
