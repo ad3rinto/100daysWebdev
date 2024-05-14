@@ -12,5 +12,15 @@ soup = BeautifulSoup(content, "html.parser")
 
 title = soup.find_all("h3")
 
+# Create list of all titles
 list_of_titles = [name.text for name in title]
-print(list_of_titles)
+# print(list_of_titles)
+
+
+# Create list of image links
+images = soup.find_all("img")
+list_of_images = [image.get("src") for image in images]
+
+
+for a,b in zip(list_of_titles, list_of_images):
+    print(a, b.split("_")[1])
