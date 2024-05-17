@@ -14,13 +14,19 @@ title = soup.find_all("h3")
 
 # Create list of all titles
 list_of_titles = [name.text for name in title]
-# print(list_of_titles)
+reversed_list = []
 
-
-# Create list of image links
+with open("series_list.txt","a") as file:
+    for x in reversed(list_of_titles):
+        file.write(x)
+        file.write("\n")
+    
+    
+# print(reversed_list)
+# Create list of image links()
 images = soup.find_all("img")
 list_of_images = [image.get("src") for image in images]
 
 
-for a,b in zip(list_of_titles, list_of_images):
-    print(a, b.split("_")[1])
+# for a,b in zip(new_list_of_titles, list_of_images):
+#     print(a)
