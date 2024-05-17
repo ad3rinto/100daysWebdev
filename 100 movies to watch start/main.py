@@ -18,8 +18,8 @@ reversed_list = []
 
 with open("series.txt","a") as file:
     for x in reversed(list_of_titles):
-        file.write(x)
-        file.write("\n")
+        file.write(f"{x}\n")
+        
     
     
 # print(reversed_list)
