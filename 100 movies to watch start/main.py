@@ -16,7 +16,7 @@ title = soup.find_all("h3")
 list_of_titles = [name.text for name in title]
 reversed_list = []
 
-with open("series_list.txt","a") as file:
+with open("series.txt","a") as file:
     for x in reversed(list_of_titles):
         file.write(x)
         file.write("\n")
