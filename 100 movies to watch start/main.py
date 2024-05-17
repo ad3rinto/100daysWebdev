@@ -10,10 +10,10 @@ content = web_data.text
 
 soup = BeautifulSoup(content, "html.parser")
 
-title = soup.find_all("h3")
+title = soup.find_all("h3", class_="title")
 
 # Create list of all titles
-list_of_titles = [name.text for name in title]
+list_of_titles = [name.getText() for name in title]
 reversed_list = []
 
 with open("series.txt","a") as file:
